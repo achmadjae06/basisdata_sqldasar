@@ -1,0 +1,124 @@
+
+
+
+SELAMAT DATANG DI CHANNEL AKHMAD JAE
+
+disini saya akan mengajarkan tutorial cara membuat database dengan
+CMD
+
+
+
+
+1. Pertama yang harus kita lakukan adalah menyiapkan aplikasi MySQL
+    atau DBMS disini saya menggunakan XAMPP
+
+
+
+
+
+2. Kemudian buka aplikasi XAMPP terus klik "start" pada ACTION
+    sampai muncul angka di PID(s) dan PORT
+
+
+
+
+
+3. Setelah itu kita masuk ke CMDnya dan masuk ke MySQL
+
+
+
+
+ 
+4. Kemudian kita buat DATABASEnya mengunakan perintah
+   CREATE DATABASE [nama_database]; dan jika sudah terbuat akan
+   muncul kata seperti :
+    " Query Ok, 0 rows affected, 0 warning (0.04 sec)"
+
+
+
+
+5. Dan untuk mengetahui atau menampilkan DATABASE yaitu
+    menggunakan perintah :
+    SHOW DATABASES; 
+
+
+
+
+6. Kemudian setelah kita membuat database, kita masuk kedalam database 
+   menggunakan perintah : USE nama_database; akan muncul kata "Database changed"
+   perintah USE juga bisa untuk mengganti database.
+
+
+
+
+7.Setelah berada dalam database kemudian kita membuat tabel, perintah untuk membuat 
+   tabel yaitu :
+  CREATE TABLE nama_table ( nama_field tipe_data(ukuran));
+  jika terbuat akan muncul kata seperti kita membuat database
+
+
+
+
+8. Kemudian jika kita ingin mengetahui/menampilkan tabel yang sudah kita buat dengan
+  mengunak perintah:
+  DESCRIBE nama_tabel;  atau DESC nama_tabel;
+
+
+
+
+
+9. Dan jika kita ingin melakukan perubahan pada tabel yang dibuat di gunakan perintah
+  ALTER , perintah ALTER dapat di gunakan untuk
+  - menambah field  - mengubah nama field -menghapus field -mengubah tipe data
+  - menambahkan/menghapus index atau key
+
+
+ a. Menambah field perintahnya yaitu:
+    ALTER  TABLE nama_tabel ADD COLUMN nama_field tipe_data(ukuran)
+   [ AFTER  | BEFORE | FIRST ];
+  kemudian kita cek dengan perintah DESCRIBE
+
+
+ b. Mengubah nama field perintahnya yaitu: 
+
+    ALTER TABLE nama_tabel CHANGE nama_field_lama nama_field_baru 
+    tipe_data(ukuran);  
+ 
+    kemudian kita cek dengan perintah DESCRIBE
+
+
+
+ c. Mengubah tipe data perintahnya yaitu:
+
+    ALTER TABLE nama_tabel MODIFY nama_field tipe_data_baru(ukuran);
+
+   kemudian kita cek dengan perintah DESCRIBE
+
+
+ d. Menghapus field perintahnya yaitu:
+
+    ALTER TABLE nama_tabel DROP nama_field;
+  
+   kemudian kita cek dengan perintah menampilkan tabel yang tadi
+
+
+ e. Menambah index atau key perintahnya yaitu:
+    ALTER TABLE nama_tabel ADD [ INDEX ] (nama_field);
+    atau juga bisa menggunakan perintah:
+    CREATE INDEX nama_index ON nama_tabel (nama_field);
+
+    tipe index :
+   - PRIMARY KEY  - UNIQUE KEY  - FULLTEXT
+  kemudian kita cek dengan perintah DESCRIBE
+
+
+  f. Menghapus index perintahnya yaitu:
+    ALTER TABLE nama_tabel DROP [ INDEX ];
+   kemudian kita cek dengan perintah DESCRIBE
+
+
+
+
+       Demikian tutorial yang saya bisa ajarkan kurang lebihnya mohon maaf 
+                                        TERIMAH KASIH
+
