@@ -1,0 +1,72 @@
+// Perintah untuk masuk ke root MYSQL yang ada di XAMPP menggunakan CMD
+
+cd xampp
+cd mysql
+cd bin
+mysql –u root
+
+// perintah membuat database
+
+CREATE DATABASE latihan;
+
+
+// Perintah menggunakan atau mengganti database
+
+ USE latihan;
+
+
+// Perintah menghapus database
+
+DROP DATABASE latihan;
+
+
+// Perintah menampilkan database 
+
+SHOW DATABASES;
+
+
+// Perintah membuat tabel tapi pastikan database nya aktif 
+
+CREATE TABLE mahasiswa ( nama VARCHAR(30), kelas INT(20));
+
+
+// Perintah untuk mengecek tabel yang sudah di buat
+
+DESCRIBE mahasiswa;
+Atau 
+DESC mahasiswa;
+
+ 
+// Perintah ALTER Menambahkan field
+
+ALTER TABLE mahasiswa ADD COLUMN id INT (15) FIRST;
+
+
+// Perintah Mengubah nama field
+
+ALTER TABLE mahasiswa CHANGE nama nama_siswa VARCHAR(35);
+
+
+// Perintah ALTER Mengubah tipe data
+
+ALTER TABLE mahasiswa MODIFY kelas VARCHAR(20);
+
+
+// Perintah ALTER Menghapus field
+
+ALTER TABLE mahasiswa DROP kelas;
+
+
+// Perintah ALTER Menambahkan index atau key
+
+ALTER TABLE mahasiswa ADD PRIMARY KEY (id);
+
+
+// Perintah ALTER Menghapus index atau key
+
+ALTER TABLE mahasiswa DROP PRIMARY KEY
+
+
+// Perintah ALTER Menambah constraint
+
+ALTER TABLE mahasiswa ADD CONSTRAINT UNIQUE KEY (nama_siswa); 
