@@ -206,15 +206,15 @@ MariaDB [data]> SELECT species, sex, COUNT(name) AS jumlah FROM pet GROUP BY spe
 SELECT species='cat', species='dog', sex, sum(name) AS jumlah FROM pet GROUP BY species='cat', 'dog', sex;
 
 ==================================================================================================
-MariaDB [data]> SELECT species='cat', species='dog', sex, sum(name) AS jumlah FROM pet GROUP BY species='cat', 'dog', sex;
+MariaDB [data]> SELECT species='cat', species='dog', sex, count(name) AS jumlah FROM pet GROUP BY species='cat', species='dog', sex;
 +---------------+---------------+-------+--------+
 | species='cat' | species='dog' | sex   | jumlah |
 +---------------+---------------+-------+--------+
-|             0 |             0 | f     |      0 |
-|             0 |             1 | m     |      0 |
-|             0 |             0 | NULL  |      0 |
-|             1 |             0 | f     |      0 |
-|             1 |             0 | m     |      0 |
+|             0 |             1 | f     |      1 |
+|             0 |             1 | m     |      2 |
+|             0 |             0 | NULL  |      4 |
+|             1 |             0 | f     |      1 |
+|             1 |             0 | m     |      1 |
 +---------------+---------------+-------+--------+
 5 rows in set, 9 warnings (0.00 sec)
 
